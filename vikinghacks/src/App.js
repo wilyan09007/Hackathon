@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import "./Header.css";
 import FrontPage from './frontpage/FrontPage';
 import ContentPage from './contentpage/quizPage';
+//import NavBar from './NavBar/NavBar';
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <div className={`container ${backgroundClass}`}>
+{/* <NavBar /> */}
       {showFrontPage ? (
         <FrontPage onContinue={handleContinue} />
       ) : (

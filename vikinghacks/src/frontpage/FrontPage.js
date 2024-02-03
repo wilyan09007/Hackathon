@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import CoolButton from './CoolButton';
 
 import {
   makeStyles,
@@ -21,7 +22,14 @@ const useStyles = makeStyles((theme) =>
       fontWeight: 100,
       fontSize: 26,
       margin: 0,
-    }
+    },
+    continue: {
+      fontFamily: 'SpaceMono-Regular',
+      fontSize: 26,
+      marginTop: 20,
+      width: '35%',
+      borderRadius: '10px'
+    },
   })
 );
 
@@ -40,7 +48,7 @@ const FrontPage = ({ onContinue }) => {
         speed={50}
         style={{ marginTop: 40, fontSize: 96, fontFamily: 'SpaceMono-Regular', display: 'inline-block' }}
       />
-      <TypeAnimation
+      {/* <TypeAnimation
         sequence={[
           '',
           3250,
@@ -49,8 +57,22 @@ const FrontPage = ({ onContinue }) => {
         wrapper="span"
         speed={70}
         style={{ fontFamily: 'SpaceMono-Regular', fontWeight: 'lighter', fontSize: 26, margin: 0, display: 'inline-block' }}
+      /> */}
+
+      <TypeAnimation
+        sequence={[
+          '',
+          3250,
+          'A simple and fast way to find your arranged marriage partner!',
+        ]}
+        wrapper="span"
+        speed={70}
+        style={{ fontFamily: 'SpaceMono-Regular', fontWeight: 'lighter', fontSize: 26, margin: 0, display: 'inline-block' }}
       />
-      <button onClick={onContinue}>Continue</button>
+
+
+      <CoolButton onContinue={onContinue}/>
+      
     </div>
   );
 };
