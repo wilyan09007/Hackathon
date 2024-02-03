@@ -3,8 +3,9 @@
 import React, { useState, useEffect } from 'react';
 // import "./contentpage/";
 // import "./frontpage/";
-//import './App.css';
+import './App.css';
 import "./Header.css";
+import Header from "./Header"
 import FrontPage from './frontpage/FrontPage';
 import ContentPage from './contentpage/quizPage';
 //import NavBar from './NavBar/NavBar';
@@ -55,6 +56,7 @@ function App() {
       ) : (
         <ContentPage tweets={tweets} currentTweetIndex={currentTweetIndex} onGuess={checkGuess} />
       )}
+      <div id="root"></div>
     </div>
   );
 }
