@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#button {
+  font-family: 'OpenSans-Regular';
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: local('OpenSans-Regular'), url(./fonts//OpenSans-Regular.ttf) format('truetype');
+}

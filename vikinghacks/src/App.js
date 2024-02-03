@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 // import "./contentpage/";
 // import "./frontpage/";
-import './App.css';
+//import './App.css';
 import "./Header.css";
 import FrontPage from './frontpage/FrontPage';
 import ContentPage from './contentpage/quizPage';
