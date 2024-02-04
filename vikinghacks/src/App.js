@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react';
 import "./Header.css";
 import FrontPage from './frontpage/FrontPage';
 import ContentPage from './contentpage/quizPage';
+import axios from "axios";
 
 function App() {
   const [tweets, setTweets] = useState([]);
@@ -15,17 +16,20 @@ function App() {
   const [showFrontPage, setShowFrontPage] = useState(true);
 
   useEffect(() => {
-    loadTweets();
+    const options = {
+      method: "GET",
+      url: "http://localhost:5000",
+    };   
+    axios
+      .request(options)
+      .then(function (response) {
+        setTweets(response.data.message.content);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   }, []);
 
-  const loadTweets = async () => {
-    // Fetch tweets from the API or use a predefined list
-    // ...
-
-    // For this example, using a predefined list
-    const fakeTweets = ["This is a fake tweet.", "Another fake tweet for testing."];
-    setTweets(fakeTweets);
-  };
 
   const handleContinue = () => {
     setShowFrontPage(false);
