@@ -41,7 +41,7 @@ const FrontPage = ({ onContinue }) => {
       <TypeAnimation
         sequence={[
           'Hello!',
-          2000,
+          1500,
           'This is Faker!',
         ]}
         wrapper="span"
@@ -71,7 +71,7 @@ const FrontPage = ({ onContinue }) => {
       />
 
 
-      <CoolButton onContinue={onContinue}/>
+      <CoolButton name={'Wow that sounds so interesting Faker. Also do you play  League of Leg-'} onContinue={onContinue}/>
       
     </div>
   );
